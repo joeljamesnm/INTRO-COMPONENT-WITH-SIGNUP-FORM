@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { 
+      font-size: 11px; 
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+    }
+    .bg {
+      width: 100%;
+      height: 100vh;
+      background-color: hsl(0, 100%, 74%); 
+      background-image: url(images/bg-intro-desktop.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .wrapper {
+      display: flex;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .text-zone,
+    .fill-up-zone {
+      width: 550px;
+    }
+    .banner {
+      width: 100%;
+      background: hsl(248, 32%, 49%);
+      color: hsl(246, 25%, 77%);
+      padding: 20px;
+      text-align: center;
+      box-sizing: border-box;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      -webkit-box-shadow: 0px 8px 0px 0px rgba(0,0,0,0.15);
+      -moz-box-shadow: 0px 8px 0px 0px rgba(0,0,0,0.15);
+      box-shadow: 0px 8px 0px 0px rgba(0,0,0,0.15);
+    }
+    .sign-up-form {
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      -webkit-box-shadow: 0px 8px 0px 0px rgba(0,0,0,0.15);
+      -moz-box-shadow: 0px 8px 0px 0px rgba(0,0,0,0.15);
+      box-shadow: 0px 8px 0px 0px rgba(0,0,0,0.15);
+    }
+    input {
+      width: 100%;
+      padding: 15px 30px;
+      box-sizing: border-box;
+    }
+    .text-zone h1 {
+      font-size: 50px;
+      line-height: 55px;
+      color: #fff;
+      margin-top: 170px;
+      margin-bottom: 30px;
+    }
+    .text-zone p {
+      font-weight: 600;
+      color: #fff;
+    }
+    input[type=text], input[type=email], input[type=password] {
+      margin-bottom: 20px;
+      font-weight: 500;
+      border: 1px solid rgb(230, 229, 229);
+    }
+    input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+      outline: 0;
+      border: 1px solid hsl(248, 32%, 49%);
+    }
+    input[type=submit] {
+      color: #fff;
+      background: hsl(154, 59%, 51%);
+      border: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    input[type=submit]:focus {
+      background: hsl(154, 62%, 68%);
+      box-shadow: inset 0px -6px 0px -2px rgba(0,0,0,0.10);
+    }
+    input {
+      border-radius: 5px;
+    }
+    .sign-up-form p {
+      font-size: 11px;
+      text-align: center;
+      color: hsl(246, 25%, 77%);
+      font-weight: 500;
+      margin-top: 15px;
+    }
+    a {
+      font-size: 11px;
+      font-weight: 600;
+      color: #ff7a7a;
+      text-decoration: none;
+    }
+    .s1 {
+      font-weight: 700;
+      color: #fff;
+    }
+    @media (max-width: 375px) {
+      .text-zone {
+        text-align: center;
+      }
+      .text-zone h1 {
+        font-size: 30px;
+        line-height: 30px;
+      }
+      .text-zone p {
+        margin-bottom: 80px;
+      }
+      .bg {
+        height: 160vh;
+        background-color: hsl(0, 100%, 74%);
+        background-image: url(images/bg-intro-mobile.png);
+      }
+      .wrapper {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        flex-direction: column;
+      }
+      .text-zone,
+      .fill-up-zone {
+        width: 320px;
+      }
+      .attribution {
+        position: absolute;
+        top: 155vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg">
+    <div class="wrapper">
+      <div class="text-zone">
+        <h1>Learn to code by<br>watching others</h1>
+        <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+          but understanding how developers think is invaluable.</p>
+      </div>
+      <div class="fill-up-zone">
+        <div class="banner"><span class="s1">Try it free 7 days</span> <span class="s2">then $20/mo. thereafter</span></div>
+        <div class="sign-up-form">
+          <form action="">
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+            <input type="email" placeholder="Email Address">
+            <input type="password" placeholder="Password">
+            <input type="submit" value="Claim your free trial">
+            <p>By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Your Name Here</a>.
+      </p>
+    </footer>
+  </div>
+  
+  
+</body>
+</html>
